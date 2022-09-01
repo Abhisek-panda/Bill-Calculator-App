@@ -1,0 +1,26 @@
+body{background-color: black;}
+:root{
+    --darkblue : darkblue;
+    --white:white;
+}
+.container{
+    display: block;
+    margin: auto;
+    max-width: 50%;
+    border: 2px white solid;
+    color: var(--white);
+    text-align: center;
+    padding: 15px;
+}
+#btn{
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+table, td{
+    border: 2px solid white;
+}
+tr{
+    display: block;
+    margin: auto;
+}

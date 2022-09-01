@@ -4,40 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cash Register</title>
+    <title>Abhisek | Cash Register</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <h1>Cash Register</h1>
-        <p>Enter the bill maount and cash given by the customer and know minimum number of notes to return:</p>
         <div class="bill-amount">
-            <label for="bill-amount">Bill Amount:</label>
-            <input type="number" id="bill-amount">
+            <label for="bill-amount">bill Given</label>
+            <input type="text"  id="bill-amount">
         </div>
+
         <div class="cash-amount">
-            <label for="cash-given"> Cash Given</label>
-            <input type="text" id="cash-given">
+            <label for="cash-amount">Cash Given</label>
+            <input type="text"  id="cash-amount">
+
         </div>
-     
 
         <button id="btn">Check</button>
-
-        <p id="mistake-para"></p>
-        <table id="cash-table">
-            <thead>Return Change</thead>
+        <p id="message-para"></p>
+        <table>
+            <thead>Money Amount To returned</thead>
             <tr>
-                <td>No of Notes</td>
-                <td id="notes-return"></td>
-                <td id="notes-return"></td>
-                <td id="notes-return"></td>
-                <td id="notes-return"></td>
-                <td id="notes-return"></td>
-                <td id="notes-return"></td>
-                <td id="notes-return"></td>
+                <td>Returning Notes</td>
+                <td id="no-Of-Notes"></td>
+                <td id="no-Of-Notes"></td>
+                <td id="no-Of-Notes"></td>
+                <td id="no-Of-Notes"></td>
+                <td id="no-Of-Notes"></td>
+                <td id="no-Of-Notes"></td>
+                <td id="no-Of-Notes"></td>
             </tr>
             <tr>
-                <td>Note</td>
+                <td>Notes</td>
                 <td>2000</td>
                 <td>500</td>
                 <td>100</td>
@@ -47,12 +46,7 @@
                 <td>1</td>
             </tr>
         </table>
-
     </div>
-    
-
-
-
     <script src="app.js"></script>
 </body>
 </html>

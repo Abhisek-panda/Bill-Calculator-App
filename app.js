@@ -1,38 +1,44 @@
 const billAmount = document.querySelector("#bill-amount");
-const cashAmount = document.querySelector("#cash-given");
+const cashAmount = document.querySelector("#cash-amount");
+
 const button = document.querySelector("#btn");
-const mistakePara = document.querySelector("#mistake-para");
-const noOfNOtes = document.querySelectorAll("#notes-return")
+const messagePara = document.querySelector("#message-para");
 
-const cashMoney = [2000, 500, 100, 20, 10, 5, 1];
+const noOfNotes = document.querySelectorAll("#no-Of-Notes");
 
-function paragraphError(para){
-    mistakePara.style.display = "block";
-    mistakePara.innerText = para;
-}
+const money = [2000, 500, 100, 20, 10, 5, 1];
 
 
+button.addEventListener("click", function getValues() {
+    messagePara.style.display = "none";
+    if (billAmount.value > 0) {
 
-button.addEventListener("click", function getValue(){
-    if(billAmount.value > 0){
-        mistakePara.style.display = "none";
-        if(cashAmount.value >= billAmount.value) {
-            const money = cashAmount.value - Number(billAmount.value);
-            calculateChange(money);
-        }else {
-            paragraphError("You have choose to clean the plates.")
+        if (cashAmount.value >= billAmount.value) {
+
+            const amountToBeReturned = Number(cashAmount.value) - Number(billAmount.value);
+            moneyReturning(amountToBeReturned);
+        } else {
+            errorPara("Ready to do plates!")
         }
-
-    }else {
-        paragraphError("You have to choose the value in positive");
+    } else {
+        errorPara("Invalid Amount")
     }
-})
-
-function calculateChange(money){
-    for (let i= 0; i< cashMoney.length; i++) {
-        const numberOfNotes= Math.trunc(money /cashMoney[i]);
-        money = money % cashMoney[i];
-        console.log(numberOfNotes);
-        noOfNOtes[i].innerText = numberOfNotes;
-    } 
 }
+);
+
+function moneyReturning(amountToBeReturned) {
+    for (let i = 0; i < money.length; i++) {
+        const newMoney = Math.trunc(amountToBeReturned / money[i]);
+
+        amountToBeReturned = amountToBeReturned % money[i];
+
+        noOfNotes[i].innerText = newMoney;
+
+    }
+}
+
+
+function errorPara(message) {
+    messagePara.style.display = "block";
+    messagePara.innerText = message;
+};

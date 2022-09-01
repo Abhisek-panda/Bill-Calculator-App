@@ -1,26 +1,59 @@
-body{background-color: black;}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&display=swap');
 :root{
     --darkblue : darkblue;
     --white:white;
 }
+body{
+    margin:0;
+    background-color:lightyellow;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: larger;
+}
+
+input {
+    width: 60%;
+    padding: 0.3rem;
+    margin: 0.7rem;
+    font-size: large;
+}
+
 .container{
     display: block;
     margin: auto;
-    max-width: 50%;
-    border: 2px white solid;
+    max-width: 80%;
+    /* border: 2px white solid; */
     color: var(--white);
     text-align: center;
-    padding: 15px;
+    padding: 2rem;
+    background-color:rgb(18, 117, 18);
+    box-shadow: 5px;
 }
 #btn{
     display: block;
     margin: auto;
-    text-align: center;
+    padding: 0.5rem;
+    width: 10rem;
+    cursor: pointer;
+    font-weight: bold;
 }
-table, td{
-    border: 2px solid white;
+
+#btn:hover{
+    background-color:lawngreen;
+    color: black;
+    font-weight: bold;
 }
-tr{
-    display: block;
+td{
+    border-radius: 2px;
+    padding: 0.7rem;
+    background-color: palegreen;
+    color: rgb(18, 117, 18);
+   
+}
+
+table{
     margin: auto;
 }
+/* tbody{
+    display: block;
+    margin: auto;
+} */
